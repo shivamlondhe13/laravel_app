@@ -15,3 +15,6 @@ Route::post('login/check', [LoginController::class, "check"])->name("login.check
 Route::resource("user", UserController::class);
 Route::get("logout", [LogoutController::class, "index"])->name("logout");
 Route::get("applist", [AppListController::class, "index"])->name("applist");
+Route::get("test",function(){
+    echo "test";
+});
