@@ -19,6 +19,7 @@ class LoginController extends Controller
     $user = DB::table("users")->whereAny(["mobile", "email", "username"], "=", $user_name, "or")->get();
     $user_row = $user->toArray();
     if (count($user_row) == 0) {
+        return redirect(route("login"));
     } else {
       if ($req["password"] == $user_row[0]->pass) {
         $request->session()->put(["client_login" => "true", "client_id" => base64_encode($user_row[0]->id)]);

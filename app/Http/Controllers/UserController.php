@@ -47,7 +47,7 @@ class UserController extends Controller
       "password" => "required|same:confim_password",
       "confim_password" => "required|same:password"
     ]);
-    $ch_user = DB::table("user")->select("*")->where("email", "=", $email)->get();
+    $ch_user = DB::table("users")->select("*")->where("email", "=", $email)->get();
     if (count($ch_user->all()) == 0) {
       // $user = DB::table("user")->insert([
       //     "name" => $name,
