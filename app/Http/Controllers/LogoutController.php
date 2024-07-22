@@ -3,12 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class LogoutController extends Controller
 {
     function index(Request $request)
     {
-        $request->session()->forget(["client_id", "client_login"]);
+        Auth::logout();
         return redirect(route("home"));
     }
 }
