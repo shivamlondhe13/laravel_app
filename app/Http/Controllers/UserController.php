@@ -63,7 +63,7 @@ class UserController extends Controller
         "mobile" => $mobile,
         "dob" => $date,
         "address" => $address,
-        "pass" => $pass,
+        "password" => $pass,
       ]);
       if ($user) {
         return redirect(route("login"));
