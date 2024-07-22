@@ -16,10 +16,10 @@
         @endif
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="{{route("home")}}" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
+            Apps
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="{{route("home")}}">Action</a></li>
+            <li><a class="dropdown-item" href="{{route("numberformat")}}">Number Formater</a></li>
           </ul>
         </li>
       </ul>
