@@ -9,9 +9,9 @@
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="{{route("home")}}">Home</a>
         </li>
-        @if (session("client_login"))
+        @if (Auth::check())
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="{{route("user.show",base64_encode(session("client_login") ?? 0))}}">Profile</a>
+          <a class="nav-link active" aria-current="page" href="{{route("user.show",base64_encode(Auth::id() ?? 0))}}">Profile</a>
         </li>
         @endif
         <li class="nav-item dropdown">
@@ -24,7 +24,7 @@
         </li>
       </ul>
       <div class="d-flex">
-        @if (session("client_login"))
+        @if (Auth::check())
         <a href="{{route("logout")}}" class="btn btn-outline-danger mx-1">Logout</a>
         @else
         <a href="{{route("login")}}" class="btn btn-outline-success mx-1">Login</a>

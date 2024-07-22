@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
 use function Laravel\Prompts\select;
@@ -80,7 +81,7 @@ class UserController extends Controller
    */
   public function show(string $id)
   {
-    if (session("client_login")) {
+    if (Auth::check()) {
       return view("profile");
     } else {
       return redirect(route("home"));
