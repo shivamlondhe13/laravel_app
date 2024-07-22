@@ -15,11 +15,11 @@
         </li>
         @endif
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="{{route("home")}}" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
+          <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Apps
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="{{route("home")}}">Action</a></li>
+            <li><a class="dropdown-item" href="{{route("applist")}}">All App List</a></li>
           </ul>
         </li>
       </ul>
@@ -30,8 +30,6 @@
         <a href="{{route("login")}}" class="btn btn-outline-success mx-1">Login</a>
         <a href="{{route("user.create")}}" class="btn btn-outline-success mx-1">Register</a>
         @endif
-
-
       </div>
     </div>
   </div>
