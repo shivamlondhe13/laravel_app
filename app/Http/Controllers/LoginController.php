@@ -16,11 +16,11 @@ class LoginController extends Controller
   {
     $req = $request->all();
     $user_name = $req["name"];
-    $user = DB::table("user")->whereAny(["mobile", "email", "username"], "=", $user_name, "or")->get();
+    $user = DB::table("users")->whereAny(["mobile", "email", "username"], "=", $user_name, "or")->get();
     $user_row = $user->toArray();
     if (count($user_row) == 0) {
     } else {
-      if ($req["pass"] == $user_row[0]->pass) {
+      if ($req["password"] == $user_row[0]->pass) {
         $request->session()->put(["client_login" => "true", "client_id" => base64_encode($user_row[0]->id)]);
         return redirect(route("home"));
       }
