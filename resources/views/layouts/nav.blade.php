@@ -15,11 +15,19 @@
         </li>
         @endif
         <li class="nav-item dropdown">
+<<<<<<< HEAD
           <a class="nav-link dropdown-toggle" href="{{route("home")}}" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Apps
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item" href="{{route("numberformat")}}">Number Formater</a></li>
+=======
+          <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Apps
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="{{route("applist")}}">All App List</a></li>
+>>>>>>> 248dc007b32ab0e490aa99b838ac3f7480696d5b
           </ul>
         </li>
       </ul>
@@ -30,8 +38,6 @@
         <a href="{{route("login")}}" class="btn btn-outline-success mx-1">Login</a>
         <a href="{{route("user.create")}}" class="btn btn-outline-success mx-1">Register</a>
         @endif
-
-
       </div>
     </div>
   </div>
